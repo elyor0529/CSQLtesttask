@@ -1,9 +1,11 @@
 ﻿using CSQLtesttask.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace CSQLtesttask.Controllers
@@ -23,9 +25,9 @@ namespace CSQLtesttask.Controllers
         /// </summary>
         /// <returns></returns>
         [Route("task4")] 
-        public IEnumerable<vw_Task4> GetTask4()
+        public async Task<IEnumerable<vw_Task4>> GetTask4()
         {
-            return _db.vw_Task4.AsEnumerable();
+            return await _db.vw_Task4.ToArrayAsync();
         }
 
         /// <summary>
