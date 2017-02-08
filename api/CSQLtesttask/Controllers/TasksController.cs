@@ -24,7 +24,7 @@ namespace CSQLtesttask.Controllers
         /// Find clients that do not consume any service.
         /// </summary>
         /// <returns></returns>
-        [Route("task4")] 
+        [Route("task4")]
         public async Task<IEnumerable<vw_Task4>> GetTask4()
         {
             return await _db.vw_Task4.ToArrayAsync();
@@ -35,9 +35,9 @@ namespace CSQLtesttask.Controllers
         /// </summary>
         /// <returns></returns>
         [Route("task5")]
-        public IEnumerable<vw_Task5> GetTask5()
+        public async Task<IEnumerable<vw_Task5>> GetTask5()
         {
-            return _db.vw_Task5.AsEnumerable();
+            return await _db.vw_Task5.ToArrayAsync();
         }
 
         /// <summary>
@@ -45,9 +45,9 @@ namespace CSQLtesttask.Controllers
         /// </summary>
         /// <returns></returns>
         [Route("task6")]
-        public IEnumerable<vw_Task6> GetTask6()
+        public async Task<IEnumerable<vw_Task6>> GetTask6()
         {
-            return _db.vw_Task6.AsEnumerable();
+            return await _db.vw_Task6.ToArrayAsync();
         }
 
         /// <summary>
@@ -55,9 +55,9 @@ namespace CSQLtesttask.Controllers
         /// </summary>
         /// <returns></returns>
         [Route("task7")]
-        public IEnumerable<vw_Task7> GetTask7()
+        public async Task<IEnumerable<vw_Task7>> GetTask7()
         {
-            return _db.vw_Task7.AsEnumerable();
+            return await _db.vw_Task7.ToArrayAsync();
         }
 
         /// <summary>
@@ -65,9 +65,9 @@ namespace CSQLtesttask.Controllers
         /// </summary>
         /// <returns></returns>
         [Route("task8")]
-        public IEnumerable<vw_Task8> GetTask8()
+        public async Task<IEnumerable<vw_Task8>> GetTask8()
         {
-            return _db.vw_Task8.AsEnumerable();
+            return await _db.vw_Task8.ToArrayAsync();
         }
 
         /// <summary>
@@ -75,9 +75,9 @@ namespace CSQLtesttask.Controllers
         /// </summary>
         /// <returns></returns>
         [Route("task9")]
-        public IEnumerable<vw_Task9> GetTask9()
+        public async Task<IEnumerable<vw_Task9>> GetTask9()
         {
-            return _db.vw_Task9.AsEnumerable();
+            return await _db.vw_Task9.ToArrayAsync();
         }
 
         protected override void Dispose(bool disposing)
